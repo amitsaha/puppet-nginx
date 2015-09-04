@@ -30,6 +30,7 @@ class nginx (
   $client_body_buffer_size        = undef,
   $client_body_temp_path          = undef,
   $client_max_body_size           = undef,
+  $large_client_header_buffers    = undef,
   $events_use                     = undef,
   $fastcgi_cache_inactive         = undef,
   $fastcgi_cache_key              = undef,
@@ -143,6 +144,7 @@ class nginx (
   if $client_body_buffer_size or
         $client_body_temp_path or
         $client_max_body_size or
+        $large_client_header_buffers or
         $confd_purge or
         $conf_dir or
         $conf_template or

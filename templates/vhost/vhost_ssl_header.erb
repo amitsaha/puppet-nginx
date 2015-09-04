@@ -74,6 +74,9 @@ server {
   <%- if defined? @client_max_body_size -%>
   client_max_body_size <%= @client_max_body_size %>;
   <%- end -%>
+  <%- if defined? @large_client_header_buffers -%>
+  large_client_header_buffers <%= @large_client_header_buffers %>;
+  <%- end -%>
 
 <% end -%>
 <% if defined? @gzip_types -%>

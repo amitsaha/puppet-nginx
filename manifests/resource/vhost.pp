@@ -104,6 +104,8 @@
 #      client body. Default is 60s
 #   [*client_header_timeout*]     - Sets how long the server will wait for a
 #      client header. Default is 60s
+#   [*large_client_header_buffers*] - Sets the maximum number and size of buffers
+#       used for reading a client request header.
 #   [*raw_prepend*]            - A single string, or an array of strings to
 #     prepend to the server directive (after cfg prepend directives). NOTE:
 #     YOU are responsible for a semicolon on each line that requires one.
@@ -230,6 +232,7 @@ define nginx::resource::vhost (
   $client_body_timeout          = undef,
   $client_header_timeout        = undef,
   $client_max_body_size         = undef,
+  $large_client_header_buffers  = undef,
   $raw_prepend                  = undef,
   $raw_append                   = undef,
   $location_raw_prepend         = undef,

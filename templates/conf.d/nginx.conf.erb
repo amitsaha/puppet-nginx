@@ -83,6 +83,9 @@ http {
 <% if @client_max_body_size -%>
   client_max_body_size    <%= @client_max_body_size %>;
 <% end -%>
+<% if @large_client_header_buffers -%>
+  large_client_header_buffers  <%= @large_client_header_buffers %>;
+<% end -%>
 <% if @client_body_buffer_size -%>
   client_body_buffer_size <%= @client_body_buffer_size %>;
 <% end -%>
